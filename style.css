@@ -7,19 +7,12 @@
 }
 
 body {
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(255, 255, 255);
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
 
-}
-
-.section-container {
-    height: 95vh;
-    width: 95vw;
-    display: flex;
-    background-color: #ffffff;
 }
 
 /* section  */
@@ -75,7 +68,6 @@ body {
 .weather-svg {
     height: 150px;
     width: 150px;
-    background-color: #ffff;
     position: relative;
     margin-left: 3rem;
 }
@@ -181,30 +173,18 @@ body {
 /* other details of section 1  */
 .temperature {
     height: 80px;
-    width: 120px;
+    width: 150px;
     display: flex;
     font-weight: 600;
-    position: relative;
 }
 
-.main {
+.temp {
     font-size: 5rem;
     color: black;
 }
-
-.sub {
-    font-size: 2rem;
-    color: black;
+.last-char{
+    font-size: 2.5rem;
 }
-
-.sub2 {
-    position: absolute;
-    font-size: 2rem;
-    color: black;
-    right: 1px;
-    top: 1rem;
-}
-
 .details {
     display: flex;
     flex-direction: column;
@@ -239,11 +219,17 @@ body {
 }
 
 .city {
-    height: 30px;
-    width: 150px;
-    color: rgb(99, 99, 99);
+    height: 100px;
+    width: 200px;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
     font-weight: 600;
+    border-radius: 5px;
     padding: 0.2rem 0.5rem;
+    text-transform: capitalize;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* section 2  */
@@ -252,7 +238,7 @@ body {
     width: 80%;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #f6f4f4;
     flex-direction: column;
 }
 
@@ -273,16 +259,18 @@ body {
 }
 
 .toggle-el {
-    color: #616161;
     font-size: 1.2rem;
-   
+    color: #848484;
+}
+
+.active-day {
+    color: #131313;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .toggle-el:hover {
     cursor: pointer;
-    color: #131313;
-    text-decoration: underline;
-    text-underline-offset: 5px;
 }
 
 .toggle-temp {
@@ -297,28 +285,37 @@ body {
     font-weight: 600;
     position: relative;
 }
-.toggle-temp:hover{
+
+.toggle-temp:hover {
     cursor: pointer;
 }
+
 .togle-temp-el1 {
     position: absolute;
     top: 1px;
     left: 5px;
+    color: #848484;
 }
-.togle-temp-el2{
+
+.togle-temp-el2 {
     position: absolute;
     right: 7px;
-
+    color: #848484;
 }
 
-.active{
+.default {
+    color: #848484;
+}
+
+.active {
     background-color: #141414;
 }
-.active-el{
+
+.active-el {
     color: #ffffff;
 }
 
-.days-container{
+.days-container {
     height: 22vh;
     width: 90%;
     margin-top: 1rem;
@@ -327,28 +324,33 @@ body {
     justify-content: center;
     gap: 1rem;
 }
-.days-box{
+
+.days-box {
     height: 20vh;
     width: 8vw;
-    background-color: #ececec;
+    background-color: #ffffff;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
-.days-box:hover{
+
+.days-box:hover {
     cursor: pointer;
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
-.heading-container{
+
+.heading-container {
     height: 30px;
     width: 90%;
     margin-top: 1rem;
 }
-.heading{
+
+.heading {
     font-size: 1.4rem;
     font-weight: 600;
 }
-.weather-det-container{
+
+.weather-det-container {
     height: 55vh;
     width: 90%;
     display: flex;
@@ -357,18 +359,21 @@ body {
     align-items: center;
     gap: 1rem;
 }
-.container{
+
+.container {
     display: flex;
     gap: 1rem;
 }
-.weather-det-box{
+
+.weather-det-box {
     height: 26vh;
     width: 21vw;
-    background-color: #ececec;
+    background-color: #ffffff;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
-.weather-det-box:hover{
+
+.weather-det-box:hover {
     cursor: pointer;
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);

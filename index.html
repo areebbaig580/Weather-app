@@ -10,95 +10,85 @@
 </head>
 
 <body>
-    <div class="section-container">
 
-        <div class="section-1">
-            <div class="brand-name"><i class="fa-solid fa-cloud brand-icon"></i> Weather guy</div>
-            <!-- <div class="all"> -->
-
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass icon"></i>
-                    <input type="text" placeholder="Search for places..">
-                </div>
-                <div class="weather-svg">
-                    <div class="sun"></div>
-                    <div class="cloud" style="left:55px; top:30px;">
-                        <div class="cloud-puff"></div>
-                        <div class="cloud-body"></div>
-                    </div>
-                    <div class="rain-drops" style="position:absolute; bottom:5px; left:55%;">
-                        <div class="rain-drop"></div>
-                        <div class="rain-drop"></div>
-                        <div class="rain-drop"></div>
-                        <div class="rain-drop"></div>
-                    </div>
-                </div>
-
-
-                <div class="details">
-                    <div class="temperature">
-                        <div class="main">12</div>
-                        <div class="sub">o</div>
-                        <div class="sub2">C</div>
-
-                    </div>
-                    <div class="date-time">Monday, 16:00</div>
-                </div>
-                <div class="weather-det">
-                    <i class="fa-solid fa-cloud cloud-icon"></i>
-                    <div class="weather-det1">Cloudy</div>
-                </div>
-                <div class="weather-det">
-                    <i class="fa-solid fa-cloud-rain cloud-icon"></i>
-                    <div class="weather-det1">Rain - 30%</div>
-                </div>
-                <div class="city">Haldwani</div>
-            <!-- </div> -->
-
+    <div class="section-1">
+        <div class="brand-name"><i class="fa-solid fa-cloud brand-icon"></i> Weather guy</div>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+            <input type="text" placeholder="Search for places.." class="city-name">
         </div>
-        <div class="section-2">
-            <div class="header-nav">
-                <div class="toggle">
-                    <div class="toggle-el">Today</div>
-                    <div class="toggle-el">Week</div>
-                </div>
-                <div class="toggle">
-                    <div class="toggle-temp active" >
-                        <div class="togle-temp-el1 active-el">o</div>
-                        <div class="togle-temp-el2 active-el el">C</div>
-                        
-                    </div>
-                    <div class="toggle-temp" id="f">
-                        <div class="togle-temp-el1">o</div>
-                        <div class="togle-temp-el2 el" >F</div>
-                    </div>
-                </div>
+        <div class="weather-svg">
+            <div class="sun"></div>
+            <div class="cloud" style="left:55px; top:30px;">
+                <div class="cloud-puff"></div>
+                <div class="cloud-body"></div>
             </div>
-            <div class="days-container">
-                <div class="days-box"></div>
-                <div class="days-box"></div>
-                <div class="days-box"></div>
-                <div class="days-box"></div>
-                <div class="days-box"></div>
-                <div class="days-box"></div>
-                <div class="days-box"></div>
+            <div class="rain-drops" style="position:absolute; bottom:5px; left:55%;">
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
             </div>
-            <div class="heading-container">
-                <div class="heading">Today's Highlights</div>
+        </div>
+        <div class="details">
+            <div class="temperature">
+                <div class="temp"></div>
+                <div class="last-char">°C</div>
             </div>
-            <div class="weather-det-container">
-                <div class="container">
+            <div class="date-time"></div>
+        </div>
+        <div class="weather-det">
+            <i class="fa-solid fa-cloud cloud-icon"></i>
+            <div class="weather-det1" id="cloud-det">Cloudy</div>
+        </div>
+        <div class="weather-det">
+            <i class="fa-solid fa-cloud-rain cloud-icon"></i>
+            <div class="weather-det1" id="humidity">Rain - 30%</div>
+        </div>
+        <div class="city"></div>
+    </div>
+    <div class="section-2">
+        <div class="header-nav">
+            <div class="toggle">
+                <div class="toggle-el">Today</div>
+                <div class="toggle-el active-day">Week</div>
+            </div>
+            <div class="toggle">
+                <div class="toggle-temp active">
+                    <div class="togle-temp-el1 active-el">o</div>
+                    <div class="togle-temp-el2 active-el tab">C</div>
 
-                    <div class="weather-det-box"></div>
-                    <div class="weather-det-box"></div>
-                    <div class="weather-det-box"></div>
                 </div>
-                <div class="container">
+                <div class="toggle-temp">
+                    <div class="togle-temp-el1">o</div>
+                    <div class="togle-temp-el2 tab">F</div>
+                </div>
+            </div>
+        </div>
+        <div class="days-container">
+            <div class="days-box"></div>
+            <div class="days-box"></div>
+            <div class="days-box"></div>
+            <div class="days-box"></div>
+            <div class="days-box"></div>
+            <div class="days-box"></div>
+            <div class="days-box"></div>
+        </div>
+        <div class="heading-container">
+            <div class="heading">Today's Highlights</div>
+        </div>
+        <div class="weather-det-container">
+            <div class="container">
 
-                    <div class="weather-det-box"></div>
-                    <div class="weather-det-box"></div>
-                    <div class="weather-det-box"></div>
-                </div>
+                <div class="weather-det-box"></div>
+                <div class="weather-det-box"></div>
+                <div class="weather-det-box"></div>
+            </div>
+            <div class="container">
+
+                <div class="weather-det-box"></div>
+                <div class="weather-det-box"></div>
+                <div class="weather-det-box"></div>
             </div>
         </div>
     </div>
