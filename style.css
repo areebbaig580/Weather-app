@@ -182,9 +182,11 @@ body {
     font-size: 5rem;
     color: black;
 }
-.last-char{
+
+.last-char {
     font-size: 2.5rem;
 }
+
 .details {
     display: flex;
     flex-direction: column;
@@ -327,10 +329,14 @@ body {
 
 .days-box {
     height: 20vh;
-    width: 8vw;
+    width: 21vw;
     background-color: #ffffff;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .days-box:hover {
@@ -338,6 +344,11 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
+
+.day-name {
+    font-size: 1.2rem;
+}
+
 
 .heading-container {
     height: 30px;
@@ -371,6 +382,11 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2.5rem;
+    gap: 1rem;
+
 }
 
 .weather-det-box:hover {
@@ -378,4 +394,82 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 
+}
+
+.det-box-head {
+    font-size: 1.4rem;
+    color: #6f6f6f;
+}
+
+.det-box-main {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+}
+
+.det1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.det2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.det-box-btm {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.sunrise,
+.sunset {
+    display: flex;
+    gap: 2.6rem;
+    margin-top: 0.5rem;
+
+}
+
+.sun-icn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 40% 40%, #ffd43b, #f5a623);
+    border-radius: 50%;
+}
+
+.sun-icn-container {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.arrow-icn {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.uv-sun {
+    color: #ff7913;
+}
+
+.wind {
+    color: #4263eb;
+}
+
+.eye {
+    color: #efca0cfd;
+}
+
+.hot {
+    color: #ff8801;
 }
