@@ -333,6 +333,28 @@ const unitData = (unit) => {
     let tempF = weatherCache.current.temp_f;
     let tempFeelF = weatherCache.current.feelslike_f;
 
+    if (unit === "F") {
+        hourTemp.forEach((t, i) => {
+            t.innerHTML = `${weatherCache.forecast.forecastday[0].hour[i * 3].temp_f} °F`;
+        })
+        highTemp.forEach((h, i) => {
+            h.innerHTML = `${weatherCache.forecast.forecastday[0].day.maxtemp_f}°F`;
+        })
+        lowtemp.forEach((l, i) => {
+            l.innerHTML = `${weatherCache.forecast.forecastday[0].day.mintemp_f}°F`;
+        })
+    }else{
+        hourTemp.forEach((t, i) => {
+            t.innerHTML = `${weatherCache.forecast.forecastday[0].hour[i * 3].temp_c} °C`;
+        })
+        highTemp.forEach((h, i) => {
+            h.innerHTML = `${weatherCache.forecast.forecastday[0].day.maxtemp_c}°C`;
+        })
+        lowtemp.forEach((l, i) => {
+            l.innerHTML = `${weatherCache.forecast.forecastday[0].day.mintemp_c}°C`;
+        })
+    };
+
     temp.innerHTML = unit === "C" ? tempC : tempF
     feelsLike.innerHTML = unit === "C" ? `Feels like ${tempFeelC} °C` : `Feels like ${tempFeelF} °F`;
     unitName.innerHTML = unit === "C" ? "°C" : "°F";
