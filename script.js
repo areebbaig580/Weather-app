@@ -19,6 +19,19 @@ const windSpeed = document.querySelector('.wind-speed');
 const visibileStatus = document.querySelector('.visible-status');
 const uvIndex = document.querySelector('.uv');
 const uvStatus = document.querySelector('.uv-status');
+const feelsLike = document.getElementById('feels-like');
+let iconToday = document.querySelector('.icon-today');
+let iconTommorow = document.querySelector('.icon-tommorow')
+let iconDaTommorow = document.querySelector('.icon-daTommorow');
+let highTemp = document.querySelectorAll('.high-temp');
+let lowtemp = document.querySelectorAll('.low-temp');
+const toggle = document.querySelectorAll('.toggle-el');
+const toggleContainer = document.querySelector('.days-container');
+let hour = document.querySelectorAll('.hour');
+let hourIcon = document.querySelectorAll('.hour-icon');
+let hourTemp = document.querySelectorAll('.hour-temp');
+let dateTommorow = document.querySelector('.tommorow');
+let dateDatommorow = document.querySelector('.da-tommorow');
 
 activeDay.forEach(box =>
     box.addEventListener('click', (evt) => {
@@ -46,6 +59,18 @@ input.addEventListener("keydown", (evt) => {
         input.value = "";
     }
 });
+
+toggle.forEach(condition =>
+    condition.addEventListener('click', (evt) => {
+        if (evt.target.innerHTML === "Today") {
+            today();
+        }
+        else if (evt.target.innerHTML === "Week") {
+            week();
+        }
+    })
+
+);
 
 const fetchImg = async (city) => {
     const imgUrl = `https://api.unsplash.com/search/photos?query=${city}&client_id=vgt0k7bEhZUHietwFU9QYymdYAnVINAybM9hmAuShb0`
@@ -133,10 +158,10 @@ const fetchData = async (city) => {
     let visibility = current.vis_km;
     let sunrise = data.forecast.forecastday[0].astro.sunrise;
     let sunset = data.forecast.forecastday[0].astro.sunset;
-    let humiditystatus = getHumidityStatus(humid);
+    let humiditystatus = getHumidityStatus(humidity);
     let visibilitystatus = getVisibilityStatus(visibility);
     let uvstatus = getUVStatus(uv);
-
+    let feelCurr = current.feelslike_c;
 
     if (aqiCurr <= 50) {
         aqiCondtn.innerHTML = "Good";
@@ -165,22 +190,151 @@ const fetchData = async (city) => {
     aqi.innerHTML = aqiCurr;
     uvIndex.innerHTML = uv;
     uvStatus.innerHTML = uvstatus;
+    feelsLike.innerHTML = `Feels like ${feelCurr} °C`;
 
     console.log(data);
 
     weatherCache = data;
+    week();
     return data;
 
 };
 
+const today = () => {
+    toggleContainer.innerHTML = `
+     <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>
+            <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>
+            <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>
+            <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>
+            <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>
+            <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>
+            <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>
+            <div class="hour-box">
+                <div class="hour"></div>
+                <img class="hour-icon">
+                <div class="hour-temp"></div>
+                
+            </div>`
+    hour = document.querySelectorAll('.hour');
+    hourIcon = document.querySelectorAll('.hour-icon');
+    hourTemp = document.querySelectorAll('.hour-temp');
+
+    hour.forEach((h, i) => {
+        h.innerHTML = weatherCache.forecast.forecastday[0].hour[i * 3].time.split(" ")[1];
+
+    })
+    hourIcon.forEach((icn, i) => {
+        icn.src = weatherCache.forecast.forecastday[0].hour[i * 3].condition.icon;
+    })
+    hourTemp.forEach((t, i) => {
+        t.innerHTML = `${weatherCache.forecast.forecastday[0].hour[i * 3].temp_c} °C`;
+    })
+
+};
+
+const week = () => {
+
+    toggleContainer.innerHTML = `<div class="days-box">
+                <div class="day-name">Today</div>
+                <img class="icon-today weather-icon">
+                <div class="high-low-temp">
+                    <div class="high-temp"></div>
+                    <div class="low-temp"></div>
+                </div>
+
+            </div>
+            <div class="days-box">
+                <div class="day-name tommorow"></div>
+                <img class="icon-tommorow">
+               <div class="high-low-temp">
+                    <div class="high-temp"></div>
+                    <div class="low-temp"></div>
+                </div>
+
+            </div>
+            <div class="days-box">
+                <div class="day-name da-tommorow"></div>
+                <img class="icon-daTommorow">
+                <div class="high-low-temp">
+                    <div class="high-temp"></div>
+                    <div class="low-temp"></div>
+                </div>
+
+            </div>`
+
+    iconToday = document.querySelector('.icon-today');
+    iconTommorow = document.querySelector('.icon-tommorow');
+    iconDaTommorow = document.querySelector('.icon-daTommorow');
+    highTemp = document.querySelectorAll('.high-temp');
+    lowtemp = document.querySelectorAll('.low-temp');
+    dateTommorow = document.querySelector('.tommorow');
+    dateDatommorow = document.querySelector('.da-tommorow');
+    let day1 = weatherCache.forecast.forecastday[1].date;
+    let day2 = weatherCache.forecast.forecastday[2].date;
+
+    if (weatherCache) {
+        dateTommorow.innerHTML = new Date(day1).toLocaleDateString('en-US', { weekday: 'short' });
+        dateDatommorow.innerHTML = new Date(day2).toLocaleDateString('en-US', { weekday: 'short' });
+        iconToday.src = `https:${weatherCache.current.condition.icon}`;
+        iconTommorow.src = `https:${weatherCache.forecast.forecastday[1].day.condition.icon}`;
+        iconDaTommorow.src = `https:${weatherCache.forecast.forecastday[2].day.condition.icon}`;
+        highTemp.forEach((h, i) => {
+            h.innerHTML = `${weatherCache.forecast.forecastday[0].day.maxtemp_c}°C`;
+        })
+        lowtemp.forEach((l, i) => {
+            l.innerHTML = `${weatherCache.forecast.forecastday[0].day.mintemp_c}°C`;
+        })
+
+    }
+
+};
 
 const unitData = (unit) => {
     if (!weatherCache) return;
 
     let tempC = weatherCache.current.temp_c;
+    let tempFeelC = weatherCache.current.feelslike_c;
+
     let tempF = weatherCache.current.temp_f;
+    let tempFeelF = weatherCache.current.feelslike_f;
 
     temp.innerHTML = unit === "C" ? tempC : tempF
+    feelsLike.innerHTML = unit === "C" ? `Feels like ${tempFeelC} °C` : `Feels like ${tempFeelF} °F`;
     unitName.innerHTML = unit === "C" ? "°C" : "°F";
 
 };
