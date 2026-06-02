@@ -10,7 +10,7 @@ air quality data, and dynamic city images using external APIs.
 <h2>📸 Preview</h2>
 
 <p>
-<img src="assets/images/preview.png" alt="Weather Guy Preview" width="100%">
+<img src="Preview/preview1.png" alt="Weather Guy Preview" width="100%">
 </p>
 
 
