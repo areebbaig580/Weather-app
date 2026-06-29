@@ -57,7 +57,11 @@ input.addEventListener("keydown", (evt) => {
         fetchImg(input.value);
         localStorage.setItem("lastCity", JSON.stringify(input.value));
         input.value = "";
+        if (window.innerWidth <= 1100) {
+        closeSidebar();
     }
+    }
+
 });
 
 toggle.forEach(condition =>
@@ -191,8 +195,6 @@ const fetchData = async (city) => {
     uvIndex.innerHTML = uv;
     uvStatus.innerHTML = uvstatus;
     feelsLike.innerHTML = `Feels like ${feelCurr} °C`;
-
-    console.log(data);
 
     weatherCache = data;
     week();
@@ -374,3 +376,29 @@ const defaultdata = () => {
     dateDay.innerHTML = `${day}, ${date}`;
 };
 defaultdata();
+
+const sidebarToggle  = document.getElementById('sidebarToggle');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+const sidebar        = document.getElementById('sidebar');
+
+function openSidebar() {
+    sidebar.classList.add('sidebar-open');
+    sidebarOverlay.classList.add('visible');
+    sidebarToggle.classList.add('open');
+   
+}
+ 
+function closeSidebar() {
+    sidebar.classList.remove('sidebar-open');
+    sidebarOverlay.classList.remove('visible');
+    sidebarToggle.classList.remove('open');
+}
+ 
+sidebarToggle.addEventListener('click', () => {
+    openSidebar()
+});
+
+sidebarOverlay.addEventListener('click', () => {
+    closeSidebar()
+});
+
