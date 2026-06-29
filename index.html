@@ -10,9 +10,12 @@
 </head>
 
 <body>
-
-    <div class="section-1">
-        <div class="brand-name"><i class="fa-solid fa-cloud brand-icon"></i> Weather guy</div>
+   <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    
+    <i class="fa-solid fa-x sidebar-overlay" id="sidebarOverlay"></i>
+    <div class="section-1" id="sidebar">
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass icon"></i>
             <input type="text" placeholder="Search for places.." class="city-name">
@@ -72,95 +75,95 @@
             <div class="heading">Today's Highlights</div>
         </div>
         <div class="weather-det-container">
-            <div class="container">
 
-                <div class="weather-det-box">
-                    <div class="det-box-head">UV Index</div>
-                    <div class="det-box-main">
-                        <div class="det1 uv"></div>
-                    </div>
-                    <div class="det-box-btm">
-                        <div class="btm-icn">
-                            <i class="fa-solid fa-sun uv-sun"></i>
-                        </div>
-                        <div class="btm-det uv-status"></div>
-                    </div>
-                </div>
-                <div class="weather-det-box">
-                    <div class="det-box-head">Wind status</div>
-                    <div class="det-box-main">
-                        <div class="det1 wind-speed"></div>
-                        <div class="det2">km/h</div>
-                    </div>
-                    <div class="det-box-btm">
-                        <div class="btm-icn">
-                            <i class="fa-solid fa-wind wind"></i>
-                        </div>
-                        <div class="btm-det">WSW</div>
-                    </div>
-                </div>
-                <div class="weather-det-box">
-                    <div class="det-box-head">Sunrise & Sunset</div>
-                    <div class="sunrise">
-                        <div class="sun-icn-container">
-                            <div class="sun-icn">
-                                <i class="fa-solid fa-up-long arrow-icn"></i>
-                            </div>
-                        </div>
-                        <div class="rise-time time"></div>
-                    </div>
-                    <div class="sunset">
-                        <div class="sun-icn-container">
-                            <div class="sun-icn">
-                                <i class="fa-solid fa-down-long arrow-icn"></i>
-                            </div>
-                        </div>
-                        <div class="set-time time"></div>
-                    </div>
 
+            <div class="weather-det-box">
+                <div class="det-box-head">UV Index</div>
+                <div class="det-box-main">
+                    <div class="det1 uv"></div>
+                </div>
+                <div class="det-box-btm">
+                    <div class="btm-icn">
+                        <i class="fa-solid fa-sun uv-sun"></i>
+                    </div>
+                    <div class="btm-det uv-status"></div>
+                </div>
+            </div>
+            <div class="weather-det-box">
+                <div class="det-box-head">Wind status</div>
+                <div class="det-box-main">
+                    <div class="det1 wind-speed"></div>
+                    <div class="det2">km/h</div>
+                </div>
+                <div class="det-box-btm">
+                    <div class="btm-icn">
+                        <i class="fa-solid fa-wind wind"></i>
+                    </div>
+                    <div class="btm-det">WSW</div>
+                </div>
+            </div>
+            <div class="weather-det-box">
+                <div class="det-box-head">Sunrise & Sunset</div>
+                <div class="sunrise">
+                    <div class="sun-icn-container">
+                        <div class="sun-icn">
+                            <i class="fa-solid fa-up-long arrow-icn"></i>
+                        </div>
+                    </div>
+                    <div class="rise-time time"></div>
+                </div>
+                <div class="sunset">
+                    <div class="sun-icn-container">
+                        <div class="sun-icn">
+                            <i class="fa-solid fa-down-long arrow-icn"></i>
+                        </div>
+                    </div>
+                    <div class="set-time time"></div>
                 </div>
 
             </div>
-            <div class="container">
 
-                <div class="weather-det-box">
-                    <div class="det-box-head">Humidity</div>
-                    <div class="det-box-main">
-                        <div class="det1 humidity"></div>
-                        <div class="det2">%</div>
-                    </div>
-                    <div class="det-box-btm">
-                        <div class="btm-icn">
-                            <i class="fa-brands fa-hotjar hot"></i>
-                        </div>
-                        <div class="btm-det humidity-status"></div>
-                    </div>
-                </div>
-                <div class="weather-det-box">
-                    <div class="det-box-head">Visibility</div>
-                    <div class="det-box-main">
-                        <div class="det1 visible"></div>
-                        <div class="det2">km</div>
-                    </div>
-                    <div class="det-box-btm">
-                        <div class="btm-icn">
-                            <i class="fa-solid fa-arrows-to-eye eye"></i>
-                        </div>
-                        <div class="btm-det visible-status"></div>
-                    </div>
-                </div>
-                <div class="weather-det-box">
-                    <div class="det-box-head">Air quality</div>
-                    <div class="det-box-main">
-                        <div class="det1 aqi"></div>
-                    </div>
-                    <div class="det-box-btm">
-                        <div class="btm-icn aqi-icn"></div>
-                        <div class="btm-det aqi-det"></div>
-                    </div>
-                </div>
 
+
+
+            <div class="weather-det-box">
+                <div class="det-box-head">Humidity</div>
+                <div class="det-box-main">
+                    <div class="det1 humidity"></div>
+                    <div class="det2">%</div>
+                </div>
+                <div class="det-box-btm">
+                    <div class="btm-icn">
+                        <i class="fa-brands fa-hotjar hot"></i>
+                    </div>
+                    <div class="btm-det humidity-status"></div>
+                </div>
             </div>
+            <div class="weather-det-box">
+                <div class="det-box-head">Visibility</div>
+                <div class="det-box-main">
+                    <div class="det1 visible"></div>
+                    <div class="det2">km</div>
+                </div>
+                <div class="det-box-btm">
+                    <div class="btm-icn">
+                        <i class="fa-solid fa-arrows-to-eye eye"></i>
+                    </div>
+                    <div class="btm-det visible-status"></div>
+                </div>
+            </div>
+            <div class="weather-det-box">
+                <div class="det-box-head">Air quality</div>
+                <div class="det-box-main">
+                    <div class="det1 aqi"></div>
+                </div>
+                <div class="det-box-btm">
+                    <div class="btm-icn aqi-icn"></div>
+                    <div class="btm-det aqi-det"></div>
+                </div>
+            </div>
+
+
 
         </div>
     </div>
