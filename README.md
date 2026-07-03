@@ -1,4 +1,4 @@
-<h1>☁️ Weather Guy</h1>
+<h1> Weather Guy</h1>
 
 <p>
 <strong>Weather Guy</strong> is a modern weather dashboard built using
@@ -6,7 +6,7 @@
 The application provides real-time weather information, hourly forecasts,
 air quality data, and dynamic city images using external APIs.
 </p>
-
+Live link : https://weather-app-kappa-bay-27.vercel.app/
 <h2>📸 Preview</h2>
 
 <p>
@@ -14,11 +14,12 @@ air quality data, and dynamic city images using external APIs.
 </p>
 
 
-<h2>🚀 Features</h2>
+<h2> Features</h2>
 
 <ul>
     <li>Search weather by city name</li>
     <li>Real-time weather conditions</li>
+    <li>Responsive around all devices</li>
     <li>Hourly weather forecast</li>
     <li>Weekly weather forecast</li>
     <li>Temperature unit conversion (°C / °F)</li>
