@@ -7,7 +7,7 @@ The application provides real-time weather information, hourly forecasts,
 air quality data, and dynamic city images using external APIs.
 </p>
 Live link : https://weather-app-kappa-bay-27.vercel.app/
-<h2>📸 Preview</h2>
+<h2> Preview</h2>
 
 <p>
 <img src="Preview/preview1.png" alt="Weather Guy Preview" width="100%">
@@ -32,7 +32,7 @@ Live link : https://weather-app-kappa-bay-27.vercel.app/
     <li>Dynamic city images</li>
 </ul>
 
-<h2>🛠 Technologies Used</h2>
+<h2>Technologies Used</h2>
 
 <ul>
     <li>HTML5</li>
@@ -43,9 +43,9 @@ Live link : https://weather-app-kappa-bay-27.vercel.app/
 </ul>
 
 
-<h2>🔌 APIs Used</h2>
+<h2> APIs Used</h2>
 
-<h3>🌦 WeatherAPI</h3>
+<h3> WeatherAPI</h3>
 <ul>
     <li>Current weather conditions</li>
     <li>Hourly forecasts</li>
@@ -54,13 +54,13 @@ Live link : https://weather-app-kappa-bay-27.vercel.app/
     <li>Astronomical information (sunrise & sunset)</li>
 </ul>
 
-<h3>🖼 Unsplash API</h3>
+<h3> Unsplash API</h3>
 <ul>
     <li>Dynamic city background images</li>
     <li>Location-based visual enhancement</li>
 </ul>
 
-<h2>📊 Weather Highlights</h2>
+<h2> Weather Highlights</h2>
 
 <ul>
     <li>UV Index Monitoring</li>
@@ -71,7 +71,7 @@ Live link : https://weather-app-kappa-bay-27.vercel.app/
     <li>Sunrise & Sunset Information</li>
 </ul>
 
-<h2>🧠 What I Learned</h2>
+<h2> What I Learned</h2>
 
 <ul>
     <li>Working with REST APIs</li>
@@ -84,7 +84,7 @@ Live link : https://weather-app-kappa-bay-27.vercel.app/
 </ul>
 
 
-<h2>🔮 Future Improvements</h2>
+<h2> Future Improvements</h2>
 
 <ul>
     <li>Geolocation support</li>
@@ -103,7 +103,7 @@ Images are sourced dynamically through Unsplash.
 This project is intended for educational and portfolio purposes.
 </p>
 
-<h2>👤 Author</h2>
+<h2> Author</h2>
 
 <p>
 <strong>Areeb Baig</strong><br>
